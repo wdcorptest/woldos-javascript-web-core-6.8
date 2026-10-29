@@ -3,6 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+body {
+    font-family: TTLakes-ExtraLight, Arial, Helvetica, sans-serif;
+}
 @font-face {
     font-family: 'TTLakes-ExtraLight';
     src: url('./fonts/TTLakes-ExtraLight.woff') format('woff');
@@ -22,13 +25,11 @@
     font-style: normal;
 }
 
-body {
-    font-family: TTLakes-ExtraLight, Arial, Helvetica, sans-serif;
-}
 button {
     background: transparent;
     border: 0;
     padding: 0;
+    margin: 0;
     cursor: pointer;
 }
 .upper-menu {
@@ -36,14 +37,89 @@ button {
     padding: 10px;
     justify-content: space-around;
     box-shadow: 0 0 5px #D9FFF5;
+    max-height: 88px;
 }
-.upper-menu__logo {
-    padding-right: 16px;
-    margin-right: 16px;
-    background-image: url('./images/divider.svg');
-    background-repeat: no-repeat;
-    background-position: right center;
+.upper-menu__logo-icon{
+    width: 96.55px;
+    height: 50.81px;
 }
-h2 {
+
+.nav-menu__title {
     font-family: TTLakes-Bold;
+    font-size: 28px;
+    line-height: 40px;
+    letter-spacing: -0.6px;
+    color: #1B1C21;
+    padding-left: 12px;
+    border-left: 4px solid #41F6D7;
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+.nav-menu__list {
+    display: flex;
+    overflow: scroll;
+    list-style: none;
+    scrollbar-width: none;
+    margin-left: 16px;
+    max-height: 40px;
+    margin-bottom: 24px;
+    white-space: nowrap;
+}
+.nav-menu__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 16.54px;
+    height: 40px;
+}
+.nav-menu__link {
+    flex-shrink: 0;
+    text-decoration: none;
+    color: #7E7E82;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    font-size: 16px;
+}
+.nav-menu__item:hover,
+.nav-menu__item:focus-within,
+.nav-menu__item:active {
+    border: 2px solid #B8FFEC;
+    border-radius: 6px;
+    outline: none;
+}
+.content-box__block {
+    margin-bottom: 16px;
+}
+.content-box__paragraph {
+    margin-left: 16px;
+    margin-right: 16px;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.2px;
+    color: #1B1C21;
+    margin-bottom: 16px;
+}
+.content-box__summary {
+    margin-left: 24.29px;
+    list-style: none;
+    
+    cursor: pointer;
+}
+.content-box__summary::before {
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 11px;
+    margin-right: 16px;
+
+    background-image: url('./images/icon.svg');
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 7.41px 10.29px;
+}
+.content-box__details[open] .content-box__summary::before {
+    transform: rotate(180deg);
+}
+.content-box__main-image {
+    width: 100%;
 }
