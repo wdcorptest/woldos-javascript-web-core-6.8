@@ -75,6 +75,10 @@ button {
     padding-top: 24px;
     padding-bottom: 40px;
 }
+.nav-menu__submit-request,
+.nav-menu__repair-status {
+    display: none;
+}
 .nav-menu__title {
     font-family: TTLakes-Bold;
     font-size: 28px;
@@ -243,5 +247,45 @@ button {
 @media (min-width: 1120px) {
 .upper-menu {
     display: none;
+}
+
+.nav-menu__submit-request,
+.nav-menu__repair-status {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    font-family: 'TTLakes-Medium';
+    font-weight: 500;
+}
+.nav-menu__heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-right: 25px;
+}
+.nav-menu__button {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+.nav-menu__submit-request::before {
+    content: 'Оставить заявку';
+}
+.nav-menu__repair-status::before {
+    content: 'Статус ремонта';
+}
+.content-box__details::details-content {
+    max-height: none;
+    overflow: visible;
+}
+.nav-menu__list {
+    display: flex;
+    flex-wrap: wrap;
+    max-height: none;
+    overflow: visible;
+    white-space: normal;
 }
 }
